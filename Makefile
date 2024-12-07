@@ -1,7 +1,7 @@
 # [TODO] modify instruction name, sysroot, toolchain
-INST = padd.h.h0
-SYSROOT = /path/to/riscv64-unknown-elf
-TOOLCHAIN = /path/to/build
+INST = psextb.h
+SYSROOT = /home/chsu/rvp-workspace/RISCV-p-extension-toolchain/build/riscv64-unknown-elf
+TOOLCHAIN = /home/chsu/rvp-workspace/RISCV-p-extension-toolchain/build-64
 SAIL_ENV = sail_env/
 SPIKE_ENV = spike_env/
 ENV = env/
