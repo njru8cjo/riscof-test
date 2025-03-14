@@ -1,5 +1,5 @@
 # [TODO] modify instruction name, sysroot, toolchain
-INST = psadd.b
+INST = pmacc.w.heo
 SYSROOT = /home/chsu/rvp-workspace/RISCV-p-extension-toolchain/build/riscv64-unknown-elf
 TOOLCHAIN = /home/chsu/rvp-workspace/RISCV-p-extension-toolchain/build-64
 SAIL_ENV = sail_env/
@@ -56,7 +56,7 @@ spike-64:
 	$(S_FILE) \
 	-o $(INST)-01.S/dut/my.elf \
 	-DTEST_CASE_1=True -DXLEN=64 -mabi=lp64
-	@spike --isa=rv64imfcp +signature=$(SPIKE_SIG) +signature-granularity=4 my.elf
+	@spike --isa=rv64imfcp +signature=$(SPIKE_SIG) +signature-granularity=4 $(INST)-01.S/dut/my.elf
 
 
 clean:
